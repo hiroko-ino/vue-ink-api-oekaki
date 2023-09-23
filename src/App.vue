@@ -11,8 +11,6 @@ onMounted(async () => {
   const ctx = canvasRef.value.getContext("2d")
   const presenter = await navigator.ink.requestPresenter({ presentationArea: canvasRef.value });
 
-  console.log(presenter)
-
   canvasRef.value.addEventListener("pointermove", async (evt) => {
     if (ctx === null) return
     const pointSize = 10;
